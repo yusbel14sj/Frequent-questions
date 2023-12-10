@@ -1,0 +1,162 @@
+@font-face {
+  font-family: 'workSans';
+  src: url(/assets/fonts/static/WorkSans-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'workSans';
+  src: url(/assets/fonts/static/WorkSans-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'workSans';
+  src: url(/assets/fonts/static/WorkSans-SemiBold.ttf);
+  font-weight: 600;
+}
+* {
+  padding: 0px;
+  margin: 0;
+}
+html {
+  font-family: 'workSans';
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body {
+  background: hsl(275, 100%, 97%);
+  background-image: url('/assets/images/background-pattern-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (min-width: 640px) {
+  body {
+    background-image: url(/assets/images/background-pattern-desktop.svg);
+  }
+}
+body .asd {
+  background: hsl(0, 0%, 100%);
+  min-width: 280px;
+  width: 65%;
+  max-width: 700px;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  top: 100px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+}
+body .asd .asd__title {
+  font-family: 'workSans', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: hsl(292, 42%, 14%);
+  position: relative;
+  padding-left: 40px;
+}
+@media screen and (min-width: 60px) {
+  body .asd .asd__title {
+    font-size: 45px;
+  }
+}
+body .asd .asd__title::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  background-image: url('/assets/images/icon-star.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (min-width: 60px) {
+  body .asd .asd__title::before {
+    width: 30px;
+    height: 30px;
+  }
+}
+body .asd .asd__list {
+  margin: 20px 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+body .asd .asd__list .asd__list-item--border {
+  padding-bottom: 16px;
+  border-bottom: 1px solid hsl(275, 100%, 97%);
+}
+body .asd .asd__list .asd__list-item label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .asd .asd__list .asd__list-item label p {
+  width: 82%;
+  height: auto;
+  font-size: 16px;
+  font-weight: 600;
+  color: hsl(292, 42%, 14%);
+}
+body .asd .asd__list .asd__list-item label p:hover {
+  color: hsl(280.92, 82.98%, 53.92%);
+}
+@media screen and (min-width: 60px) {
+  body .asd .asd__list .asd__list-item label p {
+    font-size: 20px;
+  }
+}
+body .asd .asd__list .asd__list-item label span {
+  width: 30px;
+  height: 30px;
+  background-image: url('/assets/images/icon-plus.svg');
+}
+body .asd .asd__list .asd__list-item input {
+  position: fixed;
+  opacity: 0;
+}
+body .asd .asd__list .asd__list-item .p {
+  margin-top: 10px;
+  display: none;
+  font-size: 12px;
+  font-weight: 400;
+  color: hsl(292, 16%, 49%);
+}
+@media screen and (min-width: 60px) {
+  body .asd .asd__list .asd__list-item .p {
+    font-size: 16px;
+  }
+}
+body .asd .asd__list .asd__list-item .display {
+  display: block;
+}
+body .attribution {
+  position: sticky;
+  bottom: 10px;
+}

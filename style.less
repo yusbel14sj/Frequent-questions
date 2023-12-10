@@ -1,0 +1,163 @@
+@white: hsl(0,0%,100%);
+@LightPink: hsl(275, 100%, 97%);
+@GrayishPurple: hsl(292, 16%, 49%);
+@DarkPurple: hsl(292, 42%, 14%);
+
+
+@font-face {
+    font-family:'workSans';
+    src: url(/assets/fonts/static/WorkSans-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family:'workSans';
+    src: url(/assets/fonts/static/WorkSans-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family:'workSans';
+    src: url(/assets/fonts/static/WorkSans-SemiBold.ttf);
+    font-weight:600;
+}
+
+
+*{
+    padding: 0px;
+    margin: 0;
+    
+}
+html{
+    font-family: 'workSans';
+    box-sizing: border-box;
+
+}
+body{
+    background: @LightPink;
+    background-image: url('/assets/images/background-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    background-size:contain;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width:640px) {
+        background-image: url(/assets/images/background-pattern-desktop.svg);
+        
+    }
+
+    .asd{
+        background: @white;
+        min-width: 280px;
+        width: 65%;
+        max-width: 700px;
+        padding: 15px;
+        box-sizing: border-box;
+        position: relative;
+        top: 100px;
+        margin-bottom: 40px;
+
+        border-radius: 10px;
+        .asd__title{
+            font-family: 'workSans', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: @DarkPurple;
+            @media screen and (min-width:60px) {
+                font-size: 45px;
+             }
+
+            position: relative;
+            padding-left:40px;
+
+
+            &::before{
+                content:'';
+                
+                
+                position:absolute;
+                top: 10px;
+                left: 0px;
+                width: 20px;
+                height: 20px;
+
+                background-image: url('/assets/images/icon-star.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                
+                @media screen and (min-width:60px) {
+                    width: 30px;
+                    height: 30px;
+                 }
+            }
+        }
+        .asd__list{
+            margin: 20px 0;
+
+            list-style: none;
+
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .asd__list-item{
+                &--border{
+                    padding-bottom: 16px;
+                    border-bottom: 1px solid @LightPink;
+                    
+                }
+                & label {
+                    display:flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    & p{
+                        width: 82%;
+                        height: auto;
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: @DarkPurple;
+                        &:hover{
+                            color:hsl(280.92deg 82.98% 53.92%);
+                        }
+                        @media screen and (min-width:60px) {
+                            font-size: 20px;
+                         }
+                    }
+                    & span {
+                        width: 30px;
+                        height: 30px;
+                        background-image: url('/assets/images/icon-plus.svg');
+                    }
+                }
+                & input{
+                    position: fixed;
+                    opacity: 0;
+                }
+                & .p{
+                    margin-top: 10px;
+                    display: none;
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: @GrayishPurple;
+                    @media screen and (min-width:60px) {
+                        font-size: 16px;
+                     }
+                }
+                .display{
+                    display: block;
+                }
+            }
+        }
+    }
+    .attribution{
+        position:sticky;
+        bottom: 10px;
+    }
+    
+
+
+
+}
